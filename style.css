@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --main-color: #2988e0;
+  --white: #fff;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 2rem;
+  letter-spacing: 2px;
+  display: flex;
+  height: 100vh;
+  background-image: url(./backgound.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+.container {
+  padding: 0 2rem;
+  width: 60rem;
+  margin: auto;
+  height: 26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  color: #444;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 3rem rgb(0, 0, 0, 0.2);
+}
+.title {
+  font-size: 5.2rem;
+  white-space: nowrap;
+  margin-bottom: 4rem;
+}
+.btn {
+  background-color: var(--main-color);
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border: 2px solid var(--main-color);
+  outline: none;
+  border-radius: 0.6rem;
+  width: fit-content;
+  letter-spacing: inherit;
+  cursor: pointer;
+  box-shadow: 0 0 2rem rgb(0, 0, 0, 0.2);
+}
+.btn:hover {
+  background-color: var(--white);
+  color: var(--main-color);
+  transition: 0.3s;
+}
+.btn:active {
+  transform: translateY(3px);
+  transition: 0.3s;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 44, 95, 0.3);
+  transition-property: transform, opacity, visibility;
+  transition-duration: 0.3s;
+  box-sizing: border-box;
+}
+.message {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  max-width: 60rem;
+  width: calc(100% - 8rem);
+  height: 22rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.6rem;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px;
+}
+.close:hover {
+  background: rgb(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.close:active {
+  transform: scale(0.85);
+  transition: 0.3s;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10rem);
+}
+/* media queries */
+@media (max-width: 500px) {
+  html {
+    font-size: 58%;
+  }
+  .container {
+    height: 22rem;
+  }
+  .title {
+    font-size: 3.6rem;
+  }
+}
